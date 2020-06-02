@@ -1,0 +1,39 @@
+
+.c-btn{
+	display: block;
+	height: 35px;
+	color: $default-color;
+	position: relative;
+	line-height: 35px;
+	font-size: rem(14);
+	text-align: center;
+	transition:all 0.3s;
+	&--bg{
+		background: $color-secondary;
+		&-primary{
+			background: $color-primary;
+			&:hover{
+				background: darken($color-primary,10%);
+			}
+		}
+		&:hover{
+			background: darken($color-secondary,10%);
+		}
+	}
+	&--icon{
+		padding-left: 30px;
+		svg{
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform:translate(0,-50%);
+		}
+	}
+	&--width{
+		width: 170px;
+	}
+	
+}
+

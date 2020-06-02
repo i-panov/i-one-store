@@ -1,0 +1,23 @@
+.c-lang{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 35px;
+	width: 75px;
+	background: rgba($rare-color,0.1);
+	transition:all 0.3s;
+	border-radius: 1px;
+	color: $default-color-primary;
+	&:hover{
+		background: rgba($rare-color,0.4);
+	}
+	img,span{
+		display: block;
+	}
+	span{
+		font-size: rem(14);
+		padding-left: 8px;
+		line-height: 0.8;
+	}
+	
+}

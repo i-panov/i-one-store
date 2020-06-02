@@ -1,0 +1,43 @@
+.c-breadcrumbs{
+	padding: 40px 0;
+}
+
+.c-breadcrumbs__list{
+	display: flex;
+    align-items: center;
+    margin: 0 -12px;
+    li{
+    	padding:0 12px;
+    	&:last-child{
+    		a{
+    			&:before{
+    				display: none;
+    			}
+    		}
+    	}
+    }
+    a{
+		font-size: rem(14);
+		color: $default-color-primary;
+    	transition:all 0.3s;
+    	position: relative;
+		&:hover{
+			color: $color-primary;
+		}
+		&.active{
+			pointer-events: none;
+		}
+    	&:before{
+			position: absolute;
+			top: 50%;
+			right: -12px;
+			transform:translate(0,-50%) rotate(-45deg);
+			content: "";
+			width: 5px;
+			height: 5px;
+			
+			border: 1px solid;
+			border-color: transparent $color-primary $color-primary transparent;
+		}
+    }
+}

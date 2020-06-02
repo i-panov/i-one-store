@@ -1,0 +1,58 @@
+.c-menu{
+	margin: 0 -15px;
+	display: flex;
+    align-items: center;
+    
+    &--icon{
+    	margin: 0 -5px;
+    	.c-menu__item{
+    		padding:0 5px;
+    	}
+    }
+    
+} 
+.c-menu__item{
+	padding:0 15px;
+}
+.c-menu__link{
+	display: flex;
+    align-items: center;
+	position: relative;
+	color: $default-color-primary;
+	text-transform: capitalize;
+	padding: 10px 0;
+	font-size: 16px;
+	transition:all 0.3s;
+	&:hover{
+		color: $color-primary;
+	}
+	&--angel{
+
+		padding-right: 15px;
+		&:before{
+			position: absolute;
+			top: calc(50% - 2.5px);
+			right: 0;
+			transform:translate(0,-50%) rotate(45deg);
+			content: "";
+			width: 5px;
+			height: 5px;
+			
+			border: 1px solid;
+			border-color: transparent $color-primary $color-primary transparent;
+		}
+	}
+	&--burger{
+		span{
+			padding-left: 11px;
+			display: block;
+		}
+	}
+	&--icon{
+		font-size: 14px;
+		span{
+			padding-left: 5px;
+		}
+	}
+	
+}

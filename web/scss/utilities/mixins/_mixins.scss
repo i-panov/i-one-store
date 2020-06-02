@@ -1,0 +1,23 @@
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content; }
+	&:-moz-placeholder           { @content; }
+	&::-moz-placeholder          { @content; }
+	&:-ms-input-placeholder      { @content; }
+}
+
+
+@mixin square($size) {
+	width:$size;
+	height:$size;
+}
+
+
+
+// @mixin breakpoint($size) {
+//     @media only screen and (max-width : $size + px) { @content; }
+// }
+// Usage
+// .main{
+//     width:1100px;
+//     @include breakpoint(940){ width:100%; }
+// }

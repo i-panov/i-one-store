@@ -1,0 +1,50 @@
+.c-select{
+	.ss-single-selected{
+		border: 1px solid rgba($rare-color,0.1);
+		border-radius: 2px;
+		padding: 7.5px;
+		height: 35px;
+		.ss-arrow {
+			span{
+				&.arrow-up,
+				&.arrow-down{
+					border: solid $rare-color;
+					border-width: 0 1px 1px 0;
+				}
+			}
+		}
+	}
+
+	.ss-content {
+		border: 1px solid rgba($rare-color,0.1);
+		.ss-list{
+			.ss-option{
+				padding: 9px 10px;
+				&:hover{
+					background: $color-primary;
+					// background: red;
+					.c-select__item{
+						sup{
+							color: $default-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--simple{
+		.ss-single-selected{
+			background: transparent;
+			border: none;
+		}
+	}
+	
+}
+.c-select__item{
+	display: block;
+	sup{
+		font-size: 12px;
+		color: $color-primary;
+	}
+}

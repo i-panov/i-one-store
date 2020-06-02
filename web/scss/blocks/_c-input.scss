@@ -1,0 +1,78 @@
+.c-input{
+	width: 100%;
+	position: relative;
+	
+	&--width{
+		width: 410px;
+		
+	}
+	&--placeholder{
+		&:before{
+			content: attr(data-placeholder);
+			position: absolute;
+			top: 0%;
+			left: 10px;
+			transform:translate(0,14px);
+			font-size: 12px;
+			line-height: 0.8;
+			z-index: 1;
+			transition:all 0.3s;
+			color: $rare-color;
+		}
+		&.active{
+			&:before{
+				transform:translate(0px,3px);
+				font-size: 9px;
+			}
+			
+		}
+		.c-input__input{
+			text-indent: 10px;
+		}
+	}
+
+	&--icon{
+		
+	}
+	&--search{
+		button{
+			position: absolute;
+			cursor: pointer;
+			width: 40px;
+			display: block;
+			top: 0%;
+			right: 0px;
+			height: 100%;
+			border: 1px solid transparent;
+			background: transparent;
+		}
+		svg{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform:translate(-50%,-50%);
+		}
+		.c-input__input{
+			padding-right: 40px;
+		}
+	}
+
+}
+
+.c-input__input{
+	height: 35px;
+	background: $default-color;
+	border-radius: 2px;
+	border: 1px solid rgba($rare-color,0.15);
+	width: 100%;
+	text-indent: 20px;
+	color: $rare-color;
+	transition:all 0.3s;
+	@include placeholder () {
+		color: $rare-color;
+	}
+	&:focus{
+		border: 1px solid rgba($rare-color,1);
+		
+	}
+}

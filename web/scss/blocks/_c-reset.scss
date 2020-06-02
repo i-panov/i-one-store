@@ -1,0 +1,19 @@
+.c-reset{
+	font-size: rem(14);
+	display: flex;
+    align-items: center;
+    &:hover{
+    	svg{
+    		transform:rotate(360deg);
+    		
+    		path{
+    			transition:all 0.3s;
+    			fill:$color-primary;
+    		}
+    	}
+    }
+    svg{
+    	transition:all 0.3s;
+    	margin-left: 5px;
+    }
+}

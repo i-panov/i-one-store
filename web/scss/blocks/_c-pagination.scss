@@ -1,0 +1,91 @@
+
+
+.c-pagination{
+	display: flex;
+    justify-content: space-between;
+	background: $default-color;
+	border: 1px solid $rare-color-primary;
+	
+}
+
+.c-pagination__list{
+	display: flex;
+    align-items: center;
+    li{
+    	height: 100%;
+    }
+}
+
+.c-pagination__link{
+	height: 100%;
+	display: flex;
+    align-items: center;
+	padding: 0px 20px;
+	position: relative;
+	color: $default-color-primary;
+
+	&:before{
+		content: "";
+		transition:all 0.3s;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-bottom: 2px solid $color-primary;
+		transform:scale(0.1);
+		opacity: 0;
+	}
+	&:hover,
+	&.active{
+		&:before{
+			transform:scale(1);
+			opacity: 1;
+		}
+	}
+}
+
+.c-pagination{
+	&__prev,
+	&__next{
+		position: relative;
+		display: block;
+		width: 90px;
+		height: 50px;
+		&:before{
+			position: absolute;
+			top: 50%;
+			left: calc(50% - 2.5px);
+			transform:translate(0,-50%) rotate(-45deg);
+			content: "";
+			width: 7px;
+			height: 7px;
+			z-index: 1;
+			border: 1px solid;
+			transition:all 0.3s;
+			border-color: transparent $default-color-primary $default-color-primary transparent;
+		}
+		svg{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			path{
+				transition:all 0.3s;
+			}
+		}
+		&:hover{
+			&:before{
+				border-color: transparent $default-color $default-color transparent;
+			}
+			svg{
+				path{
+					fill:$color-primary;
+				}
+			}
+		}
+	}
+	&__prev{
+		transform: scale(-1);
+	}
+}

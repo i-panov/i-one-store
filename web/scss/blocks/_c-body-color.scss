@@ -1,0 +1,46 @@
+.c-body-color{
+	margin: 0 -2.5px;
+	display: flex;
+    flex-wrap: wrap;
+	li{
+		padding: 2.5px;
+	}
+	label{
+		display: block;
+	}
+}
+
+.c-body-color__check{
+	position: absolute;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	&:checked + .c-body-color__color{
+		&:before{
+			transform:scale(1);
+	    	opacity: 1;
+		}
+	}
+}
+.c-body-color__color{
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+    border-radius: 100px;
+    display: block;
+    position: relative;
+    &:before{
+    	content: "";
+        // box-sizing: border-box;
+        border-radius: 50px;
+    	background: $default-color;
+    	position: absolute;
+        box-shadow: inset 1px 2px 2px rgba($color-secondary,0.3);
+    	left: 7px;right: 7px; bottom: 7px;top: 7px;
+    	transition:all 0.3s;
+    	transform:scale(0.1);
+    	opacity: 0;
+		
+    }
+}

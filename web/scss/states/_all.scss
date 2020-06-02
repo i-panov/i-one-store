@@ -1,0 +1,35 @@
+
+
+.font-weight-700{
+	font-weight: 700;
+}
+
+
+
+
+
+.rare-color{
+	color: $rare-color;
+}
+.default-color-primary{
+	transition:all 0.3s;
+	color: $default-color-primary;
+	
+}
+
+
+// HOVER
+
+.color-hover{
+	&:hover{
+		color: $color-primary;
+	}
+}
+
+
+
+// opacity
+
+.opacity-0{
+	opacity: 0;
+}

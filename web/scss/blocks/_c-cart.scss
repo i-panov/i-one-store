@@ -1,0 +1,160 @@
+.c-cart{
+	background: $default-color;
+	width: 100%;
+	position: relative;
+	transition:all 0.3s;
+	&:hover{
+		box-shadow: 0px 2px 15px rgba($default-color-secondary, 0.25);
+	}
+}
+
+
+.c-cart__slider {
+	.image-wrap{
+		height: 150px;
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit:contain;
+		}
+	}
+}
+.c-cart__link-block{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom:0;
+	width: 100%;
+	height: calc(100% - 155px);
+	// background: red;
+	z-index: 1;
+	&:hover + .c-cart__content{
+		.c-cart__title{
+			color: $color-primary;
+		}
+	}
+}
+.c-cart__priority{
+	z-index: 2;
+	position: relative;
+}
+.c-cart__item{
+	padding: 12px 0px;
+	border-bottom: 0.25px solid rgba($rare-color,0.55);
+	&:last-child{
+		border: none;
+	}
+}
+
+
+.c-cart__content{
+	padding: 20px 20px 0;
+}
+.c-cart__color{
+	color: $rare-color;
+	display: flex;
+    align-items: center;
+    font-size: rem(12);
+    span{
+    	display: block;
+    	width: 10px;
+    	height: 10px;
+        border-radius: 50px;
+    }
+
+    p{
+		padding-left: 5px;
+    }
+    &--primary{
+    	font-size: rem(14);
+    	color: $default-color-primary;
+    	span{
+    		width: 12px;
+    		height: 12px;
+    		position: relative;
+    		
+    	}
+    	p{
+    		padding-left: 8px;
+    	}
+    }
+}
+
+.c-cart__name{
+	font-size: rem(14);
+	font-weight: 400;
+	font-family: $font-family;
+}
+.c-cart__title{
+	transition:all 0.3s;
+	text-transform: uppercase;
+	font-size: rem(18);
+	font-weight: 400;
+	font-family: $font-family;
+}
+.c-cart__sub-title{
+	color: $rare-color;
+}
+
+.c-cart__params{
+	color: $default-color-primary;
+	display: flex;
+    align-items: center;
+    font-size: rem(14);
+    svg,
+    img{
+		width: 100%;
+		object-fit:contain;
+	}
+	span{
+		width: 13px;
+		display: flex;
+	}
+	p{
+
+		width: calc(100% - 13px);
+		padding-left: 7px;
+	}
+	&--link{
+		font-size: rem(12);
+		transition:all 0.3s;
+		color: $rare-color;
+		svg{
+			path{
+				transition:all 0.3s;
+				fill: $rare-color;
+			}
+		}
+		&:hover{
+			color: $color-primary;
+			svg{
+				path{
+					fill: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+
+.c-cart__price-sale{
+	font-weight: bold;
+	font-size: rem(12);
+	color: $color-primary;
+	svg{
+		path{
+			fill: $color-primary;
+		}
+	}
+}
+.c-cart__price{
+	font-size: rem(16);
+	font-weight: bold;
+	// font-family: $font-family;
+}
+
+.c-cart__text{
+	font-size: rem(12);
+	color: $rare-color;
+}
