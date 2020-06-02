@@ -1,9 +1,9 @@
 <div class="c-cart">
 	<div class="c-cart__head">
 		<div class="c-cart__slider js-c-cart__slider">
-			<img src="./images/views/blocks/c-cart/car-1.png" alt="Alt">
-			<img src="./images/views/blocks/c-cart/car-3.jpg" alt="Alt">
-			<img src="./images/views/blocks/c-cart/car-1.png" alt="Alt">
+			<img src="/images/views/blocks/c-cart/car-1.png" alt="Alt">
+			<img src="/images/views/blocks/c-cart/car-3.jpg" alt="Alt">
+			<img src="/images/views/blocks/c-cart/car-1.png" alt="Alt">
 		</div>
 	</div>
 	<a href="" class="c-cart__link-block"></a>
@@ -28,7 +28,7 @@
 				<li class="col-12 mb-2">
 					<div class="c-cart__params">
 						<span>
-							<img src="./images/views/blocks/c-cart/icon-engine.svg">
+							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
 						<p>2,5 АТ (200 л.с)</p>
 					</div>
@@ -36,7 +36,7 @@
 				<li class="col-12 mb-2">
 					<div class="c-cart__params">
 						<span>
-							<img src="./images/views/blocks/c-cart/icon-engine.svg">
+							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
 						<p>XV70</p>
 					</div>
@@ -44,7 +44,7 @@
 				<li class="col-6 mb-2">
 					<div class="c-cart__params">
 						<span>
-							<img src="./images/views/blocks/c-cart/icon-engine.svg">
+							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
 						<p>Бензиновый</p>
 					</div>
@@ -52,7 +52,7 @@
 				<li class="col-6 mb-2">
 					<div class="c-cart__params">
 						<span>
-							<img src="./images/views/blocks/c-cart/icon-engine.svg">
+							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
 						<p>Автомат</p>
 					</div>
@@ -60,7 +60,7 @@
 				<li class="col-6 mb-2">
 					<div class="c-cart__params">
 						<span>
-							<img src="./images/views/blocks/c-cart/icon-engine.svg">
+							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
 						<p>Передний</p>
 					</div>
@@ -68,7 +68,7 @@
 				<li class="col-6 mb-2">
 					<div class="c-cart__params">
 						<span>
-							<img src="./images/views/blocks/c-cart/icon-engine.svg">
+							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
 						<p>2020</p>
 					</div>

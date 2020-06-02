@@ -1,7 +1,11 @@
+<?php
+/** @var yii\web\View $this */
+?>
+
 <ul class="c-menu">
 	<li class="c-menu__item">
 		<a href="" class="c-menu__link c-menu__link--burger c-menu__link--angel">
-			<?php $class = ''; require $src.'/template-parts/views/blocks/c-burger.php'; ?>
+            <?= $this->render('c-burger', ['class' => '']) ?>
 			<span>каталог</span>
 		</a>
 	</li>

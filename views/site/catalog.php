@@ -1,4 +1,3 @@
-<?php require 'header.php'; ?>
 <?php require 'template-parts/views/blocks/c-breadcrumbs.php'; ?>
 
 <div class="container pb-7">
@@ -14,7 +13,7 @@
 					<!-- c-text -->
 					<div class="c-text c-text--fz d-flex align-items-center">
 						<span class="d-block rare-color mr-2">Сортировать по:</span>
-						
+
 						<div>
 							<select class="js-c-select c-select c-select--simple simple">
 							  <?php for ($i=0; $i < 10; $i++) { ?>
@@ -50,7 +49,7 @@
 						<?php require 'template-parts/views/blocks/c-cart.php'; ?>
 					</div>
 				<? } ?>
-				
+
 			</div>
 			<div class="row row--1 py-5 align-items-center justify-content-between">
 				<div class="col-auto">
@@ -78,5 +77,3 @@
 	</div>
 </div>
 <?php require 'template-parts/views/blocks/c-loader.php'; ?>
-
-<?php require 'footer.php'; ?>
