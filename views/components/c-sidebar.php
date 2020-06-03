@@ -1,3 +1,7 @@
+<?php
+/** @var yii\web\View $this */
+?>
+
 <div class="c-sidebar">
 	<ul class="c-sidebar__list">
 		<li>
@@ -18,7 +22,7 @@
 		</li>
 		<li>
 			<h5 class="c-sidebar__title">Тип кузова</h5>
-			<?php 
+			<?php
 				$c_type_bodywork = ['Седан','Хетчбэк','Универсал','Внедорожник','Кроссовер','Пикап','Лифтбэк','Минивэн','Купе','Кабриолет','Родстер'];
 			?>
 			<ul class="c-type-bodywork">
@@ -28,7 +32,7 @@
 							<span class="c-type-bodywork__quantity"><?= $key ?>13</span>
 							<input class="c-type-bodywork__checkbox" type="checkbox" name="">
 							<span class="c-type-bodywork__nesting">
-								<?php require $src.'/images/views/blocks/c-type-bodywork/bodywork-'.$key.'.svg'; ?>
+                                <img src="/images/views/blocks/c-type-bodywork/bodywork-<?=$key?>.svg">
 								<span><?= $type ?></span>
 							</span>
 						</label>
@@ -103,7 +107,7 @@
 		<li>
 			<h5 class="c-sidebar__title">Цвет кузова</h5>
 			<ul class="c-body-color">
-				<?php for ($i=0; $i < 10; $i++) { ?> 
+				<?php for ($i=0; $i < 10; $i++) { ?>
 					<li>
 						<label>
 							<input class="c-body-color__check" type="checkbox" name="">

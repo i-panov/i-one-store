@@ -1,3 +1,7 @@
+<?php
+/** @var yii\web\View $this */
+?>
+
 <div class="c-breadcrumbs">
 	<div class="container d-flex align-items-center">
 		<ul class="c-breadcrumbs__list">

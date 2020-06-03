@@ -1,11 +1,15 @@
-<?php require 'template-parts/views/blocks/c-breadcrumbs.php'; ?>
+<?php
+/** @var yii\web\View $this */
+?>
+
+<?= $this->render('@app/views/components/c-breadcrumbs') ?>
 
 <div class="container pb-7">
 	<h1 class="c-title">Продажа новых автомобилей в Санкт-Петербурге</h1>
 	<div class="row">
 		<div class="col-auto">
 			<p class="c-text c-text--fz rare-color pt-3 mb-5">Показаны 4722 автомобиля</p>
-			<?php require 'template-parts/views/blocks/c-sidebar.php'; ?>
+            <?= $this->render('@app/views/components/c-sidebar') ?>
 		</div>
 		<div class="col">
 			<div class="row row--1 align-items-center justify-content-between">
@@ -39,14 +43,14 @@
 				<div class="col-auto">
 					<a href="" class="c-reset default-color-primary color-hover">
 						Сбросить фильтр
-						<?php require 'images/icons/icon-refresh.svg'; ?>
+                        <img src="/images/icons/icon-refresh.svg">
 					</a>
 				</div>
 			</div>
 			<div class="row row--1">
 				<?php for ($i=0; $i < 10; $i++) { ?>
 					<div class="col-4 mb-3">
-						<?php require 'template-parts/views/blocks/c-cart.php'; ?>
+                        <?= $this->render('@app/views/components/c-cart') ?>
 					</div>
 				<? } ?>
 
@@ -65,15 +69,15 @@
 				</div>
 			</div>
 			<div class="c-pagination">
-				<a href="" class="c-pagination__prev"><?php require $src.'/images/views/blocks/c-pagination/block-object.svg'; ?></a>
+				<a href="" class="c-pagination__prev"><img src="/images/views/blocks/c-pagination/block-object.svg"></a>
 				<ul class="c-pagination__list">
 					<li><a href="" class="c-pagination__link active">1</a></li>
 					<li><a href="" class="c-pagination__link">2</a></li>
 					<li><a href="" class="c-pagination__link">3</a></li>
 				</ul>
-				<a href="" class="c-pagination__next"><?php require $src.'/images/views/blocks/c-pagination/block-object.svg'; ?></a>
+				<a href="" class="c-pagination__next"><img src="/images/views/blocks/c-pagination/block-object.svg"></a>
 			</div>
 		</div>
 	</div>
 </div>
-<?php require 'template-parts/views/blocks/c-loader.php'; ?>
+<?= $this->render('@app/views/components/c-loader') ?>

@@ -1,13 +1,8 @@
 <?php
+/** @var yii\web\View $this */
+/** @var string $content */
 
-/* @var $this \yii\web\View */
-/* @var $content string */
-
-use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -28,7 +23,7 @@ AppAsset::register($this);
         <?php $this->beginBody() ?>
 
         <div class="wrapper">
-            <?= $this->render('blocks/c-nav') ?>
+            <?= $this->render('@app/views/components/c-nav') ?>
             <?= $content ?>
         </div>
 

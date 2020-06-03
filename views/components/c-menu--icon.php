@@ -1,3 +1,7 @@
+<?php
+/** @var yii\web\View $this */
+?>
+
 <ul class="c-menu c-menu--icon">
 	<li class="c-menu__item">
 		<a href="" class="c-menu__link c-menu__link--icon">

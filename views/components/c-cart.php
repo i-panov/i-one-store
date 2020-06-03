@@ -1,3 +1,7 @@
+<?php
+/** @var yii\web\View $this */
+?>
+
 <div class="c-cart">
 	<div class="c-cart__head">
 		<div class="c-cart__slider js-c-cart__slider">
@@ -81,16 +85,21 @@
 			</ul>
 		</li>
 		<li class="c-cart__item">
-			<div class="c-cart__price-sale mb-1">- 145 000 <?php require $src.'/images/icons/icon-ruble.svg'; ?></div>
-			<div class="c-cart__price mb-5">от 2 941 000 <?php require $src.'/images/icons/icon-ruble.svg'; ?></div>
-			<a href="" class="c-cart__text c-cart__priority"><span data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis et repudiandae, nihil ipsa dolor perspiciatis, tempora amet repellat quis assumenda aliquid tempore quo velit, adipisci ratione, exercitationem aperiam sapiente vero doloribus dolorem. Fugit eum et quo, reprehenderit, ad libero ea ipsum doloremque facilis vel consectetur! Natus quas aperiam molestias, quaerat pariatur totam rerum facilis unde eos. A nisi, odio explicabo quisquam assumenda iure delectus velit sequi numquam consequatur nam, ab iusto aspernatur nulla asperiores, cum pariatur impedit optio quia itaque possimus deleniti, doloribus tenetur. Minima doloremque molestiae hic nemo, voluptas aut magnam placeat at incidunt porro culpa, repellendus quisquam eum!" data-tippy-placement="right">Кредит от 15 317   /мес.</span></a>
+			<div class="c-cart__price-sale mb-1">- 145 000 <img src="/images/icons/icon-ruble.svg"></div>
+			<div class="c-cart__price mb-5">от 2 941 000 <img src="/images/icons/icon-ruble.svg"></div>
+			<a href="" class="c-cart__text c-cart__priority">
+                <span data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis et repudiandae, nihil ipsa dolor perspiciatis, tempora amet repellat quis assumenda aliquid tempore quo velit, adipisci ratione, exercitationem aperiam sapiente vero doloribus dolorem. Fugit eum et quo, reprehenderit, ad libero ea ipsum doloremque facilis vel consectetur! Natus quas aperiam molestias, quaerat pariatur totam rerum facilis unde eos. A nisi, odio explicabo quisquam assumenda iure delectus velit sequi numquam consequatur nam, ab iusto aspernatur nulla asperiores, cum pariatur impedit optio quia itaque possimus deleniti, doloribus tenetur. Minima doloremque molestiae hic nemo, voluptas aut magnam placeat at incidunt porro culpa, repellendus quisquam eum!"
+                      data-tippy-placement="right">
+                    Кредит от 15 317   /мес.
+                </span>
+            </a>
 		</li>
 		<li class="c-cart__item">
 			<div class="row row--1 align-items-center justify-content-between">
 				<div class="col-auto">
 					<a href="" class="c-cart__params c-cart__params--link c-cart__priority">
 						<span>
-							<?php require $src.'/images/icons/icon-like.svg'; ?>
+                            <img src="/images/icons/icon-like.svg">
 						</span>
 						<p>В избранное</p>
 					</a>
@@ -98,7 +107,7 @@
 				<div class="col-auto">
 					<a href="" class="c-cart__params c-cart__params--link c-cart__priority">
 						<span>
-							<?php require $src.'/images/icons/icon-lawyer.svg'; ?>
+                            <img src="/images/icons/icon-lawyer.svg">
 						</span>
 						<p>В сравнение</p>
 					</a>
