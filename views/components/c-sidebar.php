@@ -1,10 +1,12 @@
 <?php
 /** @var yii\web\View $this */
+/** @var app\models\BrandModel[] $models */
 
+use app\models\BrandModel;
 use app\models\CarBrand;
 use app\models\DriveWheel;
 use app\models\EngineType;
-use yii\data\ActiveDataProvider;
+use yii\data\ArrayDataProvider;
 use yii\helpers\Html;
 use yii\widgets\ListView; ?>
 
@@ -21,13 +23,24 @@ use yii\widgets\ListView; ?>
 		<li>
 			<h5 class="c-sidebar__title">Марка</h5>
             <?= ListView::widget([
-                'dataProvider' => new ActiveDataProvider(['query' => CarBrand::find()]),
+                'dataProvider' => new ArrayDataProvider(['allModels' => CarBrand::find()->all()]),
                 'options' => ['tag' => 'select', 'class' => 'js-c-select c-select'],
                 'itemView' => function(CarBrand $model, $key, int $index) {
                     $dataHtml = Html::tag('span', "${index}{$model->name} <sup>42</sup>", ['class' => 'c-select__item']);
                     return Html::tag('option', '', ['data' => ['value' => "$index VALUE", 'html' => $dataHtml, 'text' => "$index<span></span>"]]);
                 },
             ]) ?>
+            <? if ($models) { ?>
+                <h5 class="c-sidebar__title mt-4">Модель</h5>
+                <?= ListView::widget([
+                    'dataProvider' => new ArrayDataProvider(['allModels' => $models]),
+                    'options' => ['tag' => 'select', 'class' => 'js-c-select c-select'],
+                    'itemView' => function(BrandModel $model, $key, int $index) {
+                        $dataHtml = Html::tag('span', "${index}{$model->name} <sup>42</sup>", ['class' => 'c-select__item']);
+                        return Html::tag('option', '', ['data' => ['value' => "$index VALUE", 'html' => $dataHtml, 'text' => "$index<span></span>"]]);
+                    },
+                ]) ?>
+            <? } ?>
 		</li>
 		<li>
 			<h5 class="c-sidebar__title">Тип кузова</h5>
@@ -58,7 +71,7 @@ use yii\widgets\ListView; ?>
 			</select>
 			<h5 class="c-sidebar__title">Типы двигателя</h5>
             <?= ListView::widget([
-                'dataProvider' => new ActiveDataProvider(['query' => EngineType::find()]),
+                'dataProvider' => new ArrayDataProvider(['allModels' => EngineType::find()->all()]),
                 'options' => ['tag' => 'select', 'class' => 'js-c-select mb-4 c-select'],
                 'itemView' => function(EngineType $model, $key, int $index) {
                     $dataHtml = Html::tag('span', "${index}{$model->name} <sup>42</sup>", ['class' => 'c-select__item']);
@@ -67,7 +80,7 @@ use yii\widgets\ListView; ?>
             ]) ?>
 			<h5 class="c-sidebar__title">Типы привода</h5>
             <?= ListView::widget([
-                'dataProvider' => new ActiveDataProvider(['query' => DriveWheel::find()]),
+                'dataProvider' => new ArrayDataProvider(['allModels' => DriveWheel::find()->all()]),
                 'options' => ['tag' => 'select', 'class' => 'js-c-select c-select'],
                 'itemView' => function(DriveWheel $model, $key, int $index) {
                     $dataHtml = Html::tag('span', "${index}{$model->name} <sup>42</sup>", ['class' => 'c-select__item']);

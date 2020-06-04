@@ -41,7 +41,11 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '/' => 'site/index',
-                'catalog' => 'site/catalog',
+                [
+                    'pattern' => 'catalog/<brand>/<model>',
+                    'route' => 'site/catalog',
+                    'defaults' => ['brand' => null, 'model' => null],
+                ],
             ],
         ],
         'formatter' => [

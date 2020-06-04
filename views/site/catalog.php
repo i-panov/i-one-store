@@ -1,18 +1,23 @@
 <?php
 /** @var yii\web\View $this */
+/** @var app\models\CarBrand|null $brand */
+/** @var app\models\BrandModel|null $model */
+/** @var yii\db\QueryInterface $query */
 
-use app\models\Car;
 use yii\data\ActiveDataProvider;
-use yii\widgets\ListView; ?>
+use yii\widgets\ListView;
+
+$this->title = 'Продажа новых автомобилей'. (' ' . ($brand ? $brand->name : '') . ' ' . ($model ? $model->name : '')) . ' в Санкт-Петербурге'
+?>
 
 <?= $this->render('@app/views/components/c-breadcrumbs') ?>
 
 <div class="container pb-7">
-	<h1 class="c-title">Продажа новых автомобилей в Санкт-Петербурге</h1>
+	<h1 class="c-title"><?= $this->title ?></h1>
 	<div class="row">
 		<div class="col-auto">
 			<p class="c-text c-text--fz rare-color pt-3 mb-5">Показаны 4722 автомобиля</p>
-            <?= $this->render('@app/views/components/c-sidebar') ?>
+            <?= $this->render('@app/views/components/c-sidebar', ['models' => $brand ? $brand->models : []]) ?>
 		</div>
 		<div class="col">
 			<div class="row row--1 align-items-center justify-content-between">
@@ -51,7 +56,7 @@ use yii\widgets\ListView; ?>
 				</div>
 			</div>
             <?= ListView::widget([
-                'dataProvider' => new ActiveDataProvider(['query' => Car::find()]),
+                'dataProvider' => new ActiveDataProvider(['query' => $query]),
                 'layout' => "{items}",
                 'itemView' => '@app/views/components/c-cart',
                 'options' => ['class' => 'row row--1'],
