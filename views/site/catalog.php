@@ -1,6 +1,9 @@
 <?php
 /** @var yii\web\View $this */
-?>
+
+use app\models\Car;
+use yii\data\ActiveDataProvider;
+use yii\widgets\ListView; ?>
 
 <?= $this->render('@app/views/components/c-breadcrumbs') ?>
 
@@ -47,14 +50,13 @@
 					</a>
 				</div>
 			</div>
-			<div class="row row--1">
-				<?php for ($i=0; $i < 10; $i++) { ?>
-					<div class="col-4 mb-3">
-                        <?= $this->render('@app/views/components/c-cart') ?>
-					</div>
-				<? } ?>
-
-			</div>
+            <?= ListView::widget([
+                'dataProvider' => new ActiveDataProvider(['query' => Car::find()]),
+                'layout' => "{items}",
+                'itemView' => '@app/views/components/c-cart',
+                'options' => ['class' => 'row row--1'],
+                'itemOptions' => ['class' => 'col-4 mb-3'],
+            ]) ?>
 			<div class="row row--1 py-5 align-items-center justify-content-between">
 				<div class="col-auto">
 					<p class="c-text c-text--fz rare-color">Показаны 4722 автомобиля</p>
@@ -80,4 +82,5 @@
 		</div>
 	</div>
 </div>
+
 <?= $this->render('@app/views/components/c-loader') ?>

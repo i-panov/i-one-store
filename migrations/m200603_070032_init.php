@@ -6,17 +6,16 @@ use yii\db\Query;
 /**
  * Class m200603_070032_init
  */
-class m200603_070032_init extends Migration
-{
+class m200603_070032_init extends Migration {
     const FIXTURES = [
         'engine_types' => [
-            ['id' => 1, 'name' => 'Полный'],
-            ['id' => 2, 'name' => 'Передний'],
-        ],
-        'drive_wheels' => [
             ['id' => 1, 'name' => 'Бензин'],
             ['id' => 2, 'name' => 'Дизель'],
             ['id' => 3, 'name' => 'Гибрид'],
+        ],
+        'drive_wheels' => [
+            ['id' => 1, 'name' => 'Полный'],
+            ['id' => 2, 'name' => 'Передний'],
         ],
         'car_brands' => [
             ['id' => 1, 'name' => 'Lexus'],
@@ -38,26 +37,26 @@ class m200603_070032_init extends Migration
             ['id' => 10, 'brand_id' => 5, 'name' => 'Granta'],
         ],
         'cars' => [
-            ['id' => 1, 'model_id' => 1, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
-            ['id' => 2, 'model_id' => 1, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
-            ['id' => 3, 'model_id' => 2, 'engine_type_id' => 1, 'drive_wheel_id' => 3],
-            ['id' => 4, 'model_id' => 2, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
+            ['id' => 1, 'model_id' => 1, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
+            ['id' => 2, 'model_id' => 1, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
+            ['id' => 3, 'model_id' => 2, 'engine_type_id' => 3, 'drive_wheel_id' => 1],
+            ['id' => 4, 'model_id' => 2, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
             ['id' => 5, 'model_id' => 3, 'engine_type_id' => 1, 'drive_wheel_id' => 1],
             ['id' => 6, 'model_id' => 3, 'engine_type_id' => 2, 'drive_wheel_id' => 2],
-            ['id' => 7, 'model_id' => 4, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
-            ['id' => 8, 'model_id' => 4, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
-            ['id' => 9, 'model_id' => 5, 'engine_type_id' => 1, 'drive_wheel_id' => 3],
+            ['id' => 7, 'model_id' => 4, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
+            ['id' => 8, 'model_id' => 4, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
+            ['id' => 9, 'model_id' => 5, 'engine_type_id' => 3, 'drive_wheel_id' => 1],
             ['id' => 10, 'model_id' => 5, 'engine_type_id' => 2, 'drive_wheel_id' => 2],
             ['id' => 11, 'model_id' => 6, 'engine_type_id' => 1, 'drive_wheel_id' => 1],
-            ['id' => 12, 'model_id' => 6, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
-            ['id' => 13, 'model_id' => 7, 'engine_type_id' => 2, 'drive_wheel_id' => 3],
-            ['id' => 14, 'model_id' => 7, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
-            ['id' => 15, 'model_id' => 8, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
-            ['id' => 16, 'model_id' => 8, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
-            ['id' => 17, 'model_id' => 9, 'engine_type_id' => 1, 'drive_wheel_id' => 3],
-            ['id' => 18, 'model_id' => 9, 'engine_type_id' => 2, 'drive_wheel_id' => 3],
+            ['id' => 12, 'model_id' => 6, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
+            ['id' => 13, 'model_id' => 7, 'engine_type_id' => 3, 'drive_wheel_id' => 2],
+            ['id' => 14, 'model_id' => 7, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
+            ['id' => 15, 'model_id' => 8, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
+            ['id' => 16, 'model_id' => 8, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
+            ['id' => 17, 'model_id' => 9, 'engine_type_id' => 3, 'drive_wheel_id' => 1],
+            ['id' => 18, 'model_id' => 9, 'engine_type_id' => 3, 'drive_wheel_id' => 2],
             ['id' => 19, 'model_id' => 10, 'engine_type_id' => 1, 'drive_wheel_id' => 1],
-            ['id' => 20, 'model_id' => 10, 'engine_type_id' => 2, 'drive_wheel_id' => 1],
+            ['id' => 20, 'model_id' => 10, 'engine_type_id' => 1, 'drive_wheel_id' => 2],
         ],
     ];
 

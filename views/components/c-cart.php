@@ -1,5 +1,6 @@
 <?php
 /** @var yii\web\View $this */
+/** @var app\models\Car $model */
 ?>
 
 <div class="c-cart">
@@ -25,8 +26,8 @@
 					</a>
 				</li>
 			</ul>
-			<h6 class="c-cart__name">Lexus</h6>
-			<h4 class="c-cart__title mb-2">ES250</h4>
+			<h6 class="c-cart__name"><?= $model->brand->name ?></h6>
+			<h4 class="c-cart__title mb-2"><?= $model->model->name ?></h4>
 			<p class="c-cart__sub-title mb-4">Седан, ӀӀ Рестайлинг</p>
 			<ul class="row row--1">
 				<li class="col-12 mb-2">
@@ -50,7 +51,7 @@
 						<span>
 							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
-						<p>Бензиновый</p>
+						<p><?= $model->engineType->name ?></p>
 					</div>
 				</li>
 				<li class="col-6 mb-2">
@@ -66,7 +67,7 @@
 						<span>
 							<img src="/images/views/blocks/c-cart/icon-engine.svg">
 						</span>
-						<p>Передний</p>
+						<p><?= $model->driveWheel->name ?></p>
 					</div>
 				</li>
 				<li class="col-6 mb-2">
